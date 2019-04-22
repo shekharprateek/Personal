@@ -1,0 +1,53 @@
+#Addition
+def add(num1, num2):
+	return num1 + num2
+
+#sub
+def sub(num1, num2):
+	return num1 - num2
+
+#Mul
+def mul(num1, num2):
+	return num1 * num2
+#Div
+def div(num1, num2):
+	return num1 / num2
+	
+	
+def main():
+	user_continue = True
+	while user_continue:
+		validInput = False
+		while not validInput:
+			try:
+				
+				var1 = int(input("Enter num1:"))
+				var2 = int(input("Enter num2:"))
+				operation = int(input ("what do you want to do( 1.add, 2.sub, 3.mul, 4.div)"))
+				validInput = True
+			except:
+				print("Invalid input")
+		if(operation == 1):
+			print( "adding",var1,var2)
+			print(add(var1,"&",var2))
+		elif(operation == 2):
+			print("subtracting",var1,"&",var2)
+			print(sub(var1, var2))
+		elif(operation == 3):
+			print("multiplying",var1,"&",var2)
+			print(mul(var1, var2))
+		elif(operation == 4):
+			print("dividing",var1,"&",var2)
+			print(div(var1, var2))
+		
+		else:
+			print("please enter a valid operation or number")
+		user_yn = input('Would you like to continue("y" for yes any other value to exit.')
+		if(user_yn != 'y'):
+			user_continue = False
+			break
+		else:
+			continue
+main()
+	
+
